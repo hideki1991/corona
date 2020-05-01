@@ -1,7 +1,7 @@
 import { connect } from 'react-redux'
 import Charts from '../components/Charts'
 
-
+// データをrechartsに合う形式に変換してstateに持たせる
 
 function transform(header,content){
     let dataArr = []

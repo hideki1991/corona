@@ -1,15 +1,14 @@
 import React from 'react'
 import FilterWithID from '../containers/FilterWithID'
 import ListGroup from "react-bootstrap/cjs/ListGroup";
-import Alert from "react-bootstrap/Alert";
 
-const countries = ['Afghanistan/アフガニスタン','Albania', 'Algeria', 'Andorra' ,'Angola',
+const countries = ['Afghanistan','Albania', 'Algeria', 'Andorra' ,'Angola',
     'Antigua and Barbuda', 'Argentina', 'Armenia' ,'Australia', 'Austria',
     'Azerbaijan', 'Bahamas' ,'Bahrain' ,'Bangladesh' ,'Barbados', 'Belarus',
     'Belgium', 'Belize', 'Benin', 'Bhutan' ,'Bolivia', 'Bosnia and Herzegovina',
     'Botswana', 'Brazil' ,'Brunei' ,'Bulgaria', 'Burkina Faso' ,'Burma', 'Burundi',
     'Cabo Verde', 'Cambodia', 'Cameroon' ,'Canada', 'Central African Republic',
-    'Chad', 'Chile', 'China', 'Colombia', 'Congo (Brazzaville)',
+    'Chad', 'Chile', 'China', 'Colombia', 'Comolos','Congo (Brazzaville)',
     'Congo (Kinshasa)' ,'Costa Rica' ,"Cote d'Ivoire" ,'Croatia' ,'Cuba', 'Cyprus',
     'Czechia', 'Denmark' ,'Diamond Princess', 'Djibouti', 'Dominica',
     'Dominican Republic' ,'Ecuador', 'Egypt', 'El Salvador' ,'Equatorial Guinea',
@@ -30,7 +29,7 @@ const countries = ['Afghanistan/アフガニスタン','Albania', 'Algeria', 'An
     'San Marino', 'Sao Tome and Principe', 'Saudi Arabia', 'Senegal' ,'Serbia',
     'Seychelles' ,'Sierra Leone', 'Singapore', 'Slovakia' ,'Slovenia', 'Somalia',
     'South Africa' ,'South Sudan' ,'Spain', 'Sri Lanka', 'Sudan', 'Suriname',
-    'Sweden', 'Switzerland', 'Syria', 'Taiwan*', 'Tanzania' ,'Thailand',
+    'Sweden', 'Switzerland', 'Syria', 'Taiwan*','Tajikistan', 'Tanzania' ,'Thailand',
     'Timor-Leste', 'Togo' ,'Trinidad and Tobago' ,'Tunisia', 'Turkey', 'US',
     'Uganda', 'Ukraine', 'United Arab Emirates', 'United Kingdom' ,'Uruguay',
     'Uzbekistan', 'Venezuela', 'Vietnam', 'West Bank and Gaza', 'Western Sahara',
@@ -40,7 +39,6 @@ const countries = ['Afghanistan/アフガニスタン','Albania', 'Algeria', 'An
 const Filters = () => (
     <div>
         <ListGroup>
-        <Alert variant = "primary">Countries: </Alert>
         {countries.map((value, index) => {
             return <FilterWithID countryID={index+1}>{value}</FilterWithID>
         })}

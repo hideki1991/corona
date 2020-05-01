@@ -11,7 +11,7 @@ function sleep(time){
     )
 }
 
-
+// headerで全てのcsvデータをstateに保存
 
 const Header = ({ dispatch }) => {
     const confirmedFilePath = require("../data/confirmed.csv")
@@ -31,6 +31,7 @@ const Header = ({ dispatch }) => {
         {
             complete: (results) => {
                 let data = results.data
+                console.log(data)
                 sleep(250).then(()=> {
                     dispatch(addDeaths(data))
                 })
@@ -48,7 +49,7 @@ const Header = ({ dispatch }) => {
                 })
                 sleep(2000).then(()=> {
 
-                    dispatch(setCountry(186))
+                    dispatch(setCountry(data.length-2))
                 })
 
             }
