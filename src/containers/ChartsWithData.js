@@ -1,5 +1,6 @@
 import { connect } from 'react-redux'
 import Charts from '../components/Charts'
+import {setLog} from "../actions";
 
 // データをrechartsに合う形式に変換してstateに持たせる
 
@@ -38,8 +39,11 @@ const mapStateToProps = state => ({
         confirmed: transformData(state.data.confirmed,state.countryid),
         deaths: transformData(state.data.deaths,state.countryid),
         recovered: transformData(state.data.recovered,state.countryid),
+        log: state.log
     })
+const mapDispatchToProps = (dispatch) => ({
+    onClick: () => dispatch(setLog())
+})
 
 
-
-export default connect(mapStateToProps)(Charts)
+export default connect(mapStateToProps,mapDispatchToProps)(Charts)
