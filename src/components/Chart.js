@@ -2,9 +2,9 @@ import React from 'react'
 import {Bar, BarChart, CartesianGrid, Legend, Tooltip, XAxis, YAxis,ResponsiveContainer,
     LineChart, Line} from "recharts";
 
+// logならログスケール、そうでなければlinear scaleのグラフを返す
 
-
-const Chart = ({ content,max,fill,log }) => (
+const Chart = ({ content,max,fill,log,difference }) => (
     <div>
         {!log ?
             <ResponsiveContainer width="80%" aspect={5.0 / 3.0}>
@@ -17,10 +17,17 @@ const Chart = ({ content,max,fill,log }) => (
                 >
                     <CartesianGrid strokeDasharray="3 3"/>
                     <XAxis dataKey="name"/>
-                    <YAxis type="number" domain={[0, max]}/>
+                    {difference ?
+                    < YAxis type="number"/>:
+                        < YAxis type="number" domain={[0, max]}/>
+                    }
                     <Tooltip/>
                     <Legend/>
-                    <Bar dataKey="number" fill={fill}/>
+                    {difference ?
+                    <Bar dataKey="difference" fill={fill}/>:
+                        <Bar dataKey="number" fill={fill}/>
+
+                    }
                 </BarChart>
             </ResponsiveContainer> :
             <ResponsiveContainer width="80%" aspect={5.0 / 3.0}>

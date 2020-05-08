@@ -17,6 +17,10 @@ export const setCountry = countryID => ({
     countryID: countryID,
 })
 
-export const setLog = log => ({
+export const setLog = () => ({
         type: "SET_LOG"
     })
+
+export const setDifference = () => ({
+    type: "SET_DIFFERENCE"
+})

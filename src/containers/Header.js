@@ -12,6 +12,7 @@ function sleep(time){
 }
 
 // headerで全てのcsvデータをstateに保存
+// add_confirmed add_deaths add_recovered set_countryの順で実行して初期設定完了
 
 const Header = ({ dispatch }) => {
     const confirmedFilePath = require("../data/confirmed.csv")
