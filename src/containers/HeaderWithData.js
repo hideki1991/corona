@@ -14,7 +14,7 @@ function sleep(time){
 // headerで全てのcsvデータをstateに保存
 // add_confirmed add_deaths add_recovered set_countryの順で実行して初期設定完了
 
-const Header = ({ dispatch }) => {
+const HeaderWithData = ({ dispatch }) => {
     const confirmedFilePath = require("../data/confirmed.csv")
     const deathsFilePath = require("../data/deaths.csv")
     const recoveredFilePath = require("../data/recovered.csv")
@@ -71,4 +71,4 @@ const Header = ({ dispatch }) => {
     )
 }
 
-export default connect()(Header)
+export default connect()(HeaderWithData)

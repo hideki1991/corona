@@ -24,3 +24,7 @@ export const setLog = () => ({
 export const setDifference = () => ({
     type: "SET_DIFFERENCE"
 })
+
+export const setPerPop = () => ({
+    type: "SET_PERPOP"
+})
